@@ -1,0 +1,5 @@
+node_modules
+*.env
+potentialFeatures.txt
+.vscode
+.parcel-cache
