@@ -33,8 +33,7 @@ module.exports = class Email {
     // });
     return nodemailer.createTransport(
       new Transport({
-        apiKey:
-          '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',
+        apiKey: `${process.env.BREVO_API_KEY}`,
       }),
     );
   }
