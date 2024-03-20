@@ -10,11 +10,7 @@ router.post('/submit-user-data', protect, viewsController.updateUserData);
 router.get('/my-tours', protect, viewsController.getMyTours);
 
 router.use(isLoggedIn);
-router.get(
-  '/',
-  bookingController.createBookingCheckout,
-  viewsController.getOverview,
-);
+router.get('/', viewsController.getOverview);
 router.get('/tour/:slug', viewsController.getTour);
 router.get('/login', viewsController.getLoginForm);
 router.get('/sign-up', viewsController.getSignUpForm);
