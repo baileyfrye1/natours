@@ -4,6 +4,8 @@ const { isLoggedIn, protect } = require('../controllers/authController');
 
 const router = express.Router();
 
+router.use(viewsController.alerts);
+
 router.get('/me', protect, viewsController.getAccount);
 router.post('/submit-user-data', protect, viewsController.updateUserData);
 router.get('/my-tours', protect, viewsController.getMyTours);
